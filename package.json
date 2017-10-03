@@ -1,0 +1,24 @@
+{
+  "name": "batman-cli",
+  "version": "1.0.0",
+  "description": "Super ng is a util library to run angular cli ng command on cleaner way",
+  "bin": {
+    "batman": "./index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ng",
+    "batman",
+    "batman-cli",
+    "super-ng",
+    "cli",
+    "command-line",
+    "arguments"
+  ],
+  "author": "deepak.m.shrma@gmail.com",
+  "license": "ISC",
+  "dependencies": {}
+}
