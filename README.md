@@ -1,16 +1,13 @@
 # batman-cli
 batman-cli is an advance command runner tool. Easy to maintain command runner. Easy to config via external json or js.
-
 ## How to install
-```
-# as a global module
+```bash
+# As a global module
 npm i -g batman-cli
-```
-```
+####################
 # As a local module
 npm i batman-cli --save
 ```
-
 ## How to configure 
 1.  Using package.json 
 ```js

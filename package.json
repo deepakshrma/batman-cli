@@ -1,9 +1,10 @@
 {
   "name": "batman-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "batman-cli is an advance command runner tool. Easy to maintain command runner. Easy to config via external json or js.",
   "bin": {
-    "batman": "./index.js"
+    "batman": "index.js",
+    "joker": "index.js"
   },
   "main": "index.js",
   "scripts": {
@@ -20,7 +21,13 @@
     "super-cli",
     "super-ng"
   ],
-  "author": "deepak.m.shrma@gmail.com",
-  "license": "ISC",
+  "author": "Deepak Vishwakarma <deepak.m.shrma@gmail.com>",
+  "contributors": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deepakshrma/batman-cli.git"
+  },
+  "license": "MIT",
   "dependencies": {}
 }
