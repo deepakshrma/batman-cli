@@ -1,6 +1,6 @@
 {
   "name": "batman-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "batman-cli is an advance command runner tool. Easy to maintain command runner. Easy to config via external json or js.",
   "bin": {
     "batman": "index.js",
@@ -8,6 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "lint": "eslint lib/**",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,12 +23,14 @@
     "super-ng"
   ],
   "author": "Deepak Vishwakarma <deepak.m.shrma@gmail.com>",
-  "contributors": [
-  ],
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git://github.com/deepakshrma/batman-cli.git"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  }
 }
