@@ -1,9 +1,0 @@
-{
-	"ls": {
-		"ls:list": [
-			"-l",
-			{"config": "./somepath"},
-			{"config": "./somepath"}
-		]
-	}
-}

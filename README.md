@@ -13,34 +13,21 @@ npm i batman-cli --save
 ```js
 // Inside package.json
 "batman": {
-  "ng": { //bash name ex. ng for angular cli
-    // translated command:  ng new app1 --dry-run=true --inline-style=true
-  "new": { //actual command name use with batman
-    "description": "Create new app", //description 
-    "env": ["TEST=ENV"], //enviroment
-    "params": ["new", "app1"],  //params requires by actual command
-    "options": { //options requires by actual command ex. ng
-      "--inline-style": true,
-      "--dry-run": true
-      }
-    },
-    "e2e:cucumber": {
-    "description": "list all files",
-    "env": ["TEST=ENV"],
-    "params": ["e2e"],
-    "options": {
-      "--serve": false,
-      "--config": "./e2e/config/protractor.cucumber.conf.js",
-      "-wu": "false"
-      }
-    },
-  },
-  "npm": {
-  "install": {
-    "description": "install files",
-    "params": ["install"]
-    }
-  }
+	// translated command:  ng new app1 --dry-run=true --inline-style=true
+	"e2e:cucumber": { //command name that batman will refer
+		"command": "ng e2e", //actual command that batman will execute
+		"desc": "Run e2e with cucumber", //description
+		"params": [], //extra params user want to pass with command, like. --prod
+		"envs": ["TEST=ENV", "TEST2=$MOCK"], //enviroment variables, it can take enviroment variable to build envs
+		"options": { //options requires by actual command ex. ng
+			"--serve": false,
+			"--config": "./e2e/config/protractor.cucumber.conf.js",
+			"-wu": "false"
+		}
+	},
+	"new": "ng new testapp", //simple command without description
+	"test": "ng test --code-coverage", // command without description
+	"install": ["npm install", "Install node modules"] // command with description
 }
 ```
 2.  Using external config inside package.json 
@@ -49,16 +36,11 @@ npm i batman-cli --save
 // Using path module, path.resolve(process.cwd(), config)
 // Hack if needed
 "batman": {
-  "config": "./batman-config.js" //or batman-config.json(js and json both supported)
+  "config": "./batman.config.js" //or batman.config.json(js and json both supported)
 }
-// batman-config.js or batman-config.json both will work
+// batman.config.js or batman.config.json both will work
 module.exports = {
-  "ng": { //bash name ex. ng for angular cli
-    //same as above
-  },
-  "npm": {
   //same as above
-  }
 }
 ```
 ## How to use
@@ -94,16 +76,16 @@ npm run e2e:cucumber
 All the options and env supports enviroment variables, So user can replace value using $Enviroment variable
 ```js
 //Example
-"e2e:cucumber": {
-  "description": "list all files",
-  "env": ["TEST=$MY_ENV"],
-  "params": ["e2e"],
-  "options": {
-    "--serve": false,
-    "--config": "$MY_PATH",
-    "-wu": "false"
-    }
-  },
-}
+"e2e:cucumber": { //command name that batman will refer
+		"command": "ng e2e", //actual command that batman will execute
+		"desc": "Run e2e with cucumber", //description
+		"params": [], //extra params user want to pass with command, like. --prod
+		"envs": ["TEST=ENV", "TEST2=$MOCK"], //enviroment variables, it can take enviroment variable to build envs
+		"options": { //options requires by actual command ex. ng
+			"--serve": false,
+			"--config": "./e2e/config/protractor.cucumber.conf.js",
+			"-wu": "false"
+		}
+	}
 ```
 Issues+Suggestions: https://github.com/deepakshrma/batman-cli/issues

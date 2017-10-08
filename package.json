@@ -1,6 +1,6 @@
 {
   "name": "batman-cli",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "batman-cli is an advance command runner tool. Easy to maintain command runner. Easy to config via external json or js.",
   "bin": {
     "batman": "index.js",
@@ -8,8 +8,15 @@
   },
   "main": "index.js",
   "scripts": {
+    "batman": "batman",
+    "batman:lint": "batman lint",
+    "batman:list": "batman list",
+    "batman:test": "batman test",
     "lint": "eslint lib/**",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "batman": {
+    "config": "./batman.config.js"
   },
   "keywords": [
     "cli",
@@ -31,6 +38,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^4.8.0"
+    "eslint": "4.8.0",
+    "batman-cli": "latest"
   }
 }
