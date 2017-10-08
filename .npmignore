@@ -128,3 +128,5 @@ fabric.properties
 hs_err_pid*
 /test/
 *.config.js
+_config.yml
+how2use.gif
