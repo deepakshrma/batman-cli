@@ -6,8 +6,12 @@ batman-cli is an advance command runner tool. Easy to maintain command runner. E
 npm i -g batman-cli
 ####################
 # As a local module
-npm i batman-cli --save
+npm i batman-cli --save-dev
 ```
+** Demo:** 
+ [![Alt text](how2use.gif)](https://www.youtube.com/watch?v=DtZ6CLPxezM)
+** Youtube: ** 
+https://www.youtube.com/watch?v=DtZ6CLPxezM
 ## How to configure 
 1.  Using package.json 
 ```js
@@ -77,15 +81,15 @@ All the options and env supports enviroment variables, So user can replace value
 ```js
 //Example
 "e2e:cucumber": { //command name that batman will refer
-		"command": "ng e2e", //actual command that batman will execute
-		"desc": "Run e2e with cucumber", //description
-		"params": [], //extra params user want to pass with command, like. --prod
-		"envs": ["TEST=ENV", "TEST2=$MOCK"], //enviroment variables, it can take enviroment variable to build envs
-		"options": { //options requires by actual command ex. ng
-			"--serve": false,
-			"--config": "./e2e/config/protractor.cucumber.conf.js",
-			"-wu": "false"
-		}
+	"command": "ng e2e", //actual command that batman will execute
+	"desc": "Run e2e with cucumber", //description
+	"params": [], //extra params user want to pass with command, like. --prod
+	"envs": ["TEST=ENV", "TEST2=$MOCK"], //enviroment variables, it can take enviroment variable to build envs
+	"options": { //options requires by actual command ex. ng
+		"--serve": false,
+		"--config": "./e2e/config/protractor.cucumber.conf.js",
+		"-wu": "false"
+	}
 	}
 ```
 Issues+Suggestions: https://github.com/deepakshrma/batman-cli/issues
