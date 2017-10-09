@@ -17,7 +17,7 @@
     "arguments"
   ],
   "batman": {
-    "config": "./batman.config.js"
+    "config": "batman.config.js"
   },
   "author": "deepak.m.shrma@gmail.com",
   "license": "ISC",

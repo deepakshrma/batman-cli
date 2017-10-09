@@ -1,6 +1,6 @@
 {
   "name": "batman-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "batman-cli is an advance command runner tool. Easy to maintain command runner. Easy to config via external json or js.",
   "bin": {
     "batman": "index.js",

@@ -1,0 +1,7 @@
+{
+  "lint": [
+    "eslint lib/**",
+    "Running ESLint to find lint issues"
+  ],
+  "test": "echo \"Error: Mocha is comming soon\" && exit 1"
+}
