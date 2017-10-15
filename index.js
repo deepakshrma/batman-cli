@@ -15,6 +15,9 @@ const {
     colors
 } = require('./lib/utils');
 
+const printHelp = () => {
+    program.outputHelp(colors.red);
+}
 program
     .version(packageJson.version);
 program
@@ -33,10 +36,15 @@ program
     .command('list')
     .alias('ls')
     .description('list commands')
-    .option("-j, --json", "defualt is pretty")
+    .option("-n, --npm", "defualt is npm false")
+    .option("-j, --json", "defualt is json false")
     .action(list);
+program
+    .command('*')
+    .description('wild card, command not found')
+    .action(printHelp);
 program.parse(process.argv);
 
 if (!process.argv.slice(2).length) {
-    program.outputHelp(colors.red);
+    printHelp();
 }

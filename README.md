@@ -15,10 +15,16 @@ npm i batman-cli --save-dev
  [![Alt text](how2use.gif)](https://www.youtube.com/watch?v=DtZ6CLPxezM)
 #### Youtube: 
 https://www.youtube.com/watch?v=DtZ6CLPxezM
+### How to initialize
+```
+batman init
+#with config file
+batman init --config "./configs/batman.config.js" 
+```
 ### How to write commands
 ```js
 {
-	// translated command:  ng new app1 --dry-run=true --inline-style=true
+	// translated command:  ng e2e --serve=false --config=./e2e/config/protractor.cucumber.conf.js -wu=false
 	"e2e:cucumber": { //command name that batman will refer
 		"command": "ng e2e", //actual command that batman will execute
 		"desc": "Run e2e with cucumber", //description
@@ -73,7 +79,7 @@ __NOTE:__ Path preference is __batman.config.js, .batmanrc.json, package.json__
 1. As global module 
 Install as global module, and simply use
 ```bash
-batman e2e:cucumber
+batman run e2e:cucumber
 # This will read your batman command config, parse batman commands
 # Once found e2e:cucumber, will execute.
 ```
@@ -85,7 +91,7 @@ Install as local module, and simply configure package.json
     //...rest of the prop
   "scripts": {
     "batman": "batman",
-    "e2e:cucumber": "batman e2e:cucumber"
+    "e2e:cucumber": "batman run e2e:cucumber"
   },
   "batman" : { 
     //Super configuration here
@@ -114,5 +120,24 @@ All the options and env supports enviroment variables, So user can replace value
 	}
 	}
 ```
+## Release Note:
+### v1.1.0:
+__Added command line options, Run npm commands__	
+* Added command line option to init config
+* Added command line option to run npm commands
+* Added command line option to list commands
+* Now user can execute npm commands using same batman run command
+
+### v1.0.0:
+__Simple command interface__	
+* Simplify command config
+* User can use command without any other parameters
+* Description in command using array
+* List commands- using batman list
+
+### v0.0.3:
+__Initial release- Stable woking module__	
+* fixed linter issue, added eslint
+
 NPM module: https://www.npmjs.com/package/batman-cli
 Issues+Suggestions: https://github.com/deepakshrma/batman-cli/issues

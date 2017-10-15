@@ -1,5 +1,5 @@
 module.exports = {
-	// translated command:  ng new app1 --dry-run=true --inline-style=true
+	// translated command:  ng e2e --serve=false --config=./e2e/config/protractor.cucumber.conf.js -wu=false
 	"e2e:cucumber": { //command name that batman will refer
 		"command": "ng e2e", //actual command that batman will execute
 		"desc": "Run e2e with cucumber", //description
