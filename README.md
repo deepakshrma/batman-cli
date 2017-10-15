@@ -127,17 +127,16 @@ __Added command line options, Run npm commands__
 * Added command line option to run npm commands
 * Added command line option to list commands
 * Now user can execute npm commands using same batman run command
-
 ### v1.0.0:
 __Simple command interface__	
 * Simplify command config
 * User can use command without any other parameters
 * Description in command using array
 * List commands- using batman list
-
 ### v0.0.3:
 __Initial release- Stable woking module__	
 * fixed linter issue, added eslint
-
-NPM module: https://www.npmjs.com/package/batman-cli
-Issues+Suggestions: https://github.com/deepakshrma/batman-cli/issues
+## Links:
+* __Docs:__ https://deepakshrma.github.io/batman-cli/
+* __NPM module:__ https://www.npmjs.com/package/batman-cli  
+* __Issues+Suggestions:__ https://github.com/deepakshrma/batman-cli/issues
