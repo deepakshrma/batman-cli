@@ -9,9 +9,9 @@
   "main": "index.js",
   "scripts": {
     "batman": "batman",
-    "batman:lint": "batman lint",
     "batman:list": "batman list",
-    "batman:test": "batman test",
+    "batman:lint": "batman run lint",
+    "batman:test": "batman run test",
     "lint": "eslint lib/**",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -36,7 +36,10 @@
     "url": "git://github.com/deepakshrma/batman-cli.git"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "commander": "2.11.0",
+    "fs-extra": "4.0.2"
+  },
   "devDependencies": {
     "eslint": "4.8.0",
     "batman-cli": "latest"

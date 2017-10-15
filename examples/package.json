@@ -4,7 +4,7 @@
   "description": "batman-cli is an advance command runner tool. Easy to maintain command runner. Easy to config via external json or js.",
   "scripts": {
     "batman": "batman",
-    "e2e:cucumber": "batman e2e:cucumber",
+    "e2e:cucumber": "batman run e2e:cucumber",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
