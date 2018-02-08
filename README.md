@@ -76,6 +76,8 @@ module.exports = {
 ```
 __NOTE:__ Path preference is __batman.config.js, .batmanrc.json, package.json__ 
 ## How to use
+* Run or excute command
+
 1. As global module 
 Install as global module, and simply use
 ```bash
@@ -120,6 +122,13 @@ All the options and env supports enviroment variables, So user can replace value
 	}
 	}
 ```
+## Other commands 
+* List Command
+```
+batman list #List commands only batman configured
+batman list --npm #List all commands including local npm script
+```
+
 ## Release Note:
 ### v1.1.0:
 __Added command line options, Run npm commands__	

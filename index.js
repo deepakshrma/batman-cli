@@ -16,32 +16,32 @@ const {
 } = require('./lib/utils');
 
 const printHelp = () => {
-    program.outputHelp(colors.red);
+    program.outputHelp(colors.megenta);
 }
 program
     .version(packageJson.version);
 program
     .command('init')
     .alias('i')
-    .description('initialize batman configuration')
+    .description('initialize batman configuration, "For more help: $ batman init -h"')
     .option("-c, --config <path>", "set config path for batman cli. default to ./batman.config.js || ./.batmanrc.json")
     .option("-js, --js", "defualt is json")
     .action(initConfig);
 program
     .command('exec <cmd>')
     .alias('run')
-    .description('execute the given command cmd')
+    .description('Execute the given command <cmd>, "For more help: $ batman exec -h"')
     .action(exec);
 program
     .command('list')
     .alias('ls')
-    .description('list commands')
-    .option("-n, --npm", "defualt is npm false")
-    .option("-j, --json", "defualt is json false")
+    .description('List commands, "For more help: $ batman list -h"')
+    .option("-n, --npm", "prints command including npm, defualt is false")
+    .option("-j, --json", "prints command in json format, defualt is false")
     .action(list);
 program
     .command('*')
-    .description('wild card, command not found')
+    .description('Command not found')
     .action(printHelp);
 program.parse(process.argv);
 
