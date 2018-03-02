@@ -130,6 +130,10 @@ batman list --npm #List all commands including local npm script
 ```
 
 ## Release Note:
+### v1.1.2:
+* Pretty clean command print, fixed linter issue
+### v1.1.1:
+* updated Docs
 ### v1.1.0:
 __Added command line options, Run npm commands__	
 * Added command line option to init config

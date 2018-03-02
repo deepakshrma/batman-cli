@@ -16,8 +16,8 @@ const {
 } = require('./lib/utils');
 
 const printHelp = () => {
-    program.outputHelp(colors.megenta);
-}
+    program.outputHelp(colors.magenta);
+};
 program
     .version(packageJson.version);
 program
@@ -36,7 +36,8 @@ program
     .command('list')
     .alias('ls')
     .description('List commands, "For more help: $ batman list -h"')
-    .option("-n, --npm", "prints command including npm, defualt is false")
+	.option("-f, --full", "prints command with actual executable, defualt is false")
+	.option("-n, --npm", "prints command including npm, defualt is false")
     .option("-j, --json", "prints command in json format, defualt is false")
     .action(list);
 program
